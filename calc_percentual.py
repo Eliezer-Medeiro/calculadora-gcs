@@ -6,21 +6,21 @@
 
 #Branch: feature/operacoes_percentual
 
-def percentual(percentual, valor):
+def percentual(pct, valor):
     try:
-        return (percentual / 100) * valor
+        return (pct / 100) * valor
     except TypeError:
         raise ValueError("Os operandos devem ser números.")
 
-def acrescimo(percentual, valor):
+def acrescimo(pct, valor):
     try:
-        return valor + percentual(percentual, valor)
+        return valor + percentual(pct, valor)
     except TypeError:
         raise ValueError("Os operandos devem ser números.")
 
-def desconto(percentual, valor):
+def desconto(pct, valor):
     try:
-        return valor - percentual(percentual, valor)
+        return valor - percentual(pct, valor)
     except TypeError:
         raise ValueError("Os operandos devem ser números.")
 
