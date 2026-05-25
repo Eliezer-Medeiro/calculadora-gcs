@@ -4,7 +4,7 @@
 
 #Autor: João Eliézer
 
-#Branch: feature/operacoes_basicas
+#Branch: feature/operacoes_potencia
 
 def potencia(base, expoente):
     try:
