@@ -19,8 +19,16 @@ def media(lista):
 def mediana(lista):
     if not lista:
         raise ValueError("A lista não pode estar vazia.")
+    
     try:
-        return sum(lista) / len(lista)
+        lista_ordenada = sorted(lista)
+        n = len(lista_ordenada)
+        meio = n // 2
+
+        if n % 2 == 0:
+            return (lista_ordenada[meio - 1] + lista_ordenada[meio]) / 2
+        else:
+            return lista_ordenada[meio]
     except TypeError:
         raise ValueError("A lista deve conter apenas números.")
     except Exception as e:
