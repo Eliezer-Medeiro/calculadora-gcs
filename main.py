@@ -1,8 +1,17 @@
+"""
+Este módulo contém a função menu() que serve como ponto de entrada para a calculadora GCS
+"""
+
+"""
+Melhorias:
+"""
+
+
 def menu():
     print("===Calculadora GCS ===\n")
 
     try:
-        from calc_basico import somar, subtrair, multiplicar, dividir
+        from calculadora_basico import somar, subtrair, multiplicar, dividir
 
         print("Módulo Basico carregado.")
         print(f" 3 + 3 = {somar(3, 3)}")
@@ -13,7 +22,7 @@ def menu():
         print("Módulo Básico ainda não disponível.")
     
     try:
-        from calc_potencia import potencia, raiz_quadrada, raiz_cubica
+        from calculadora_potencia import potencia, raiz_quadrada, raiz_cubica
         print("\nMódulo Potência carregado.")
         print(f" 3³ = {potencia(3, 3):.0f}")
         print(f"sqrt(9) = {raiz_quadrada(9):.0f}")
@@ -22,7 +31,7 @@ def menu():
         print("Módulo Potência ainda não disponível.")
     
     try:
-        from calc_percentual import percentual, acrescimo, desconto
+        from calculadora_percentual import percentual, acrescimo, desconto
         print("\nMódulo Percentual carregado.")
         print(f"15'%' de 100 = {percentual(15, 100):.2f}")
         print(f"Acrescimo de 50% no valor de 100 é = {acrescimo(50, 100):.2f}")
@@ -32,7 +41,7 @@ def menu():
         print("Módulo Percentual ainda não disponível.")
 
     try:
-        from calc_estatistica import media, mediana, desvio_padrao
+        from calculadora_estatistica import media, mediana, desvio_padrao
         print("\nMódulo Estatistica carregado.")
         lista = [10, 11, 3, 65, 70, 32, 43, 55, 9, 18]
         print(f"Media da Lista = {media(lista):.2f}")
@@ -42,7 +51,7 @@ def menu():
         print("Módulo Estatistica ainda não disponível.")
     
     try:
-        from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
+        from calculadora_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
         print("\nMódulo Conversão carregado.")
         print(f"30°C para °F = {celsius_para_fahrenheit(30):.2f}")
         print(f"100km para milhas = {km_para_milhas(100):.2f}")

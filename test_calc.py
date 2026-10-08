@@ -1,10 +1,15 @@
+"""
+Este módulo contém testes unitários para as funções implementadas nos módulos de operações básicas, potência e raízes, percentual, estatística e conversão.
+"""
+
+
 import pytest
 
-from calc_basico import somar, subtrair, multiplicar, dividir
-from calc_potencia import potencia, raiz_quadrada, raiz_cubica
-from calc_percentual import percentual, acrescimo, desconto
-from calc_estatistica import media, mediana, desvio_padrao
-from calc_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
+from calculadora_basico import somar, subtrair, multiplicar, dividir
+from calculadora_potencia import potencia, raiz_quadrada, raiz_cubica
+from calculadora_percentual import percentual, acrescimo, desconto
+from calculadora_estatistica import media, mediana, desvio_padrao
+from calculadora_conversao import celsius_para_fahrenheit, km_para_milhas, kg_para_libras
 
 # Testes para o módulo de operações básicas
 def test_somar():
@@ -25,10 +30,8 @@ def test_multiplicar():
 def test_dividir():
     assert dividir(3, 3) == 1
     assert dividir(-1, 1) == -1
-    try:
+    with pytest.raises(ValueError, match="O denominador não pode ser zero."):
         dividir(1, 0)
-    except ValueError as e:
-        assert str(e) == "O denominador não pode ser zero."
 
 # Testes para o módulo de potência e raízes
 def test_potencia():
