@@ -1,0 +1,12 @@
+[run]
+source =
+    calculadora_basico
+    calculadora_conversao
+    calculadora_estatistica
+    calculadora_percentual
+    calculadora_potencia
+
+omit =
+    main.py
+    test_*.py
+    */test_*.py

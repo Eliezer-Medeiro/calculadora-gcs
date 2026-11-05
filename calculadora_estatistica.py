@@ -24,7 +24,7 @@ def _validate_lista(lista):
     if not lista:
         raise ValueError("A lista não pode estar vazia.")
 
-    if isinstance(lista, bool):
+    if any(isinstance(x, bool) for x in lista):
         raise ValueError("A lista deve conter apenas números.")
     
     if not all(isinstance(x, (int, float)) for x in lista):
@@ -47,8 +47,6 @@ def media(lista):
     _validate_lista(lista)
     try:
         return sum(lista) / len(lista)
-    except TypeError:
-        raise ValueError("A lista deve conter apenas números.")
     except Exception as e:
         raise RuntimeError(f"Ocorreu um erro inesperado: {e}")
 
