@@ -4,4 +4,9 @@ __pycache__/
 .env
 .vscode/
 .idea/
-
+venv/
+.venv/
+mutants/
+__pycache__/
+*.pyc
+.pytest_cache/

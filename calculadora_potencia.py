@@ -40,7 +40,7 @@ def _validate_operandos(base, expoente = 0):
     if not isinstance(base, (int, float)) or not isinstance(expoente, (int, float)):
         raise ValueError("Os operandos devem ser números.")
 
-def potencia(base, expoente):
+def potencia(base, expoente = 0):
     """
     Calcula a potência de um número.
 
